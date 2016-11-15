@@ -1,7 +1,7 @@
 <ul id="lists">
   <% sort_lists(@lists).each do |list| %>
     <li class="<%= format_complete(list) %>">
-      <a href="/lists/<%= find_list_index(list[:name]) %>">
+      <a href="/lists/<%= list[:id] %>">
         <h2><%= list[:name] %></h2> 
         <p><%= todos_remaining(list) %></p>
       </a>
